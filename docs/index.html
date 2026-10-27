@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="합성 데이터로 탐색하는 패션 리뷰 트렌드와 관측 품질. 독립적으로 재구현한 개인용 포트폴리오 데모.">
+  <title>Fashion Review — Trend Intelligence · Synthetic Demo</title>
+  <link rel="icon" href="assets/mark.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/site.css?v=20261027"><script src="assets/site.js?v=20261027" defer></script>
+</head>
+<body>
+<a class="skip" href="#main">본문으로 건너뛰기</a>
+<aside class="sidebar">
+  <a class="brand" href="index.html"><span class="brand-mark">f/</span><span>fashion review<span class="brand-sub">TREND INTELLIGENCE</span></span></a>
+  <div class="workspace-label">ANALYTICS WORKSPACE <span>01</span></div>
+  <nav aria-label="대시보드 탐색">
+    <a href="#overview" class="active"><span class="nav-icon">◫</span>Overview <span class="nav-num">01</span></a>
+    <a href="#trends"><span class="nav-icon">↗</span>Trend Analytics <span class="nav-num">02</span></a>
+    <a href="#quality"><span class="nav-icon">◎</span>Data Quality <span class="nav-num">03</span></a>
+    <a href="#monitoring"><span class="nav-icon">≋</span>Pipeline Monitoring <span class="nav-num">04</span></a>
+  </nav>
+  <div class="sidebar-note"><span class="tiny-label">THE ENGINEERING IDEA</span><p>변화를 읽기 전에,<br>관측을 확인합니다.</p><span>Review signals, with context.</span></div>
+  <a class="doc-link" href="architecture.md">Architecture & documentation ↗</a>
+  <div class="demo-stamp"><span class="dot"></span> SYNTHETIC DATA / DEMO</div>
+</aside>
+<div class="workspace">
+  <header class="topbar"><span>WORKSPACE <b>/</b> Review intelligence</span><span class="top-status">정적 포트폴리오 데모 <span class="dot"></span></span></header>
+  <main id="main">
+    <p id="load-state" role="status">합성 데모 데이터를 불러오는 중입니다…</p>
+    <button id="retry-load" type="button" hidden>다시 불러오기</button>
+    <div id="dashboard" hidden>
+    <section id="overview" aria-labelledby="page-title">
+      <div class="eyebrow">FASHION REVIEW TREND BI <span>ENGINEERING PORTFOLIO</span></div>
+      <div class="title-row"><div><h1 id="page-title">리뷰의 변화,<br><span>관측의 맥락까지.</span></h1><p class="intro">상품 리뷰 트렌드와 데이터 품질을 한곳에서 탐색합니다.<br>수집된 숫자에 관측 기간·빈도·최근성을 더했습니다.</p></div><div class="edition">DATA BRIEF<span>01—04</span><small>COLLECTION → INTELLIGENCE</small></div></div>
+      <div class="notice"><span class="notice-tag">SYNTHETIC / DEMO</span><p>모든 상품·리뷰·실행 이력은 가상 데이터입니다. 실제 운영 성과나 실시간 데이터가 아닙니다.</p></div>
+      <div class="filterbar"><div class="filter-field"><label for="period">분석 기간</label><select id="period"><option value="7">최근 7일</option><option value="3">최근 3일</option></select></div><div class="filter-field"><label for="category">카테고리</label><select id="category"><option value="all">전체 카테고리</option><option>상의</option><option>하의</option><option>아우터</option><option>원피스</option></select></div><div class="search-field"><label for="search">상품 검색</label><input id="search" type="search" placeholder="상품명, 브랜드, ID 검색" autocomplete="off"></div><div class="as-of"><span>FIXED SNAPSHOT · KST</span><b id="as-of">불러오는 중</b></div></div>
+        <div class="section-kicker">01 / OVERVIEW <span id="scope-label" aria-live="polite"></span></div>
+        <div class="metrics" id="metrics"></div>
+        <div class="overview-grid">
+          <article class="panel"><div class="panel-head"><div><span class="tiny-label">OBSERVATION MIX</span><h3>관측의 깊이</h3></div><span class="panel-meta">고정 최근 7일</span></div><div class="mix-layout"><div id="quality-ring"></div><div id="mix-legend"></div></div><p class="panel-foot">관측 이력의 충실도 기준 · 통계적 신뢰도 아님</p></article>
+          <article class="panel"><div class="panel-head"><div><span class="tiny-label">CATEGORY BALANCE</span><h3>분석할 수 있는 상품의 분포</h3></div><span class="panel-meta">합성 데이터</span></div><div id="category-bars"></div><p class="panel-foot">전체 길이: 상품 수 · 파란 영역: 7일 기준 비교 가능 이상</p></article>
+        </div>
+    </section>
+    <section id="trends" aria-labelledby="trends-title"><div class="section-heading"><div><span class="tiny-label">02 / TREND ANALYTICS</span><h2 id="trends-title">어떤 상품에 변화가 있었을까요?</h2></div><span class="section-note">순위: 기간 비교 가능 + 감소 없는 관측</span></div>
+      <div class="trend-grid"><article class="panel chart-panel"><div class="panel-head"><div><span class="tiny-label">PRODUCT REVIEW HISTORY</span><h3 id="chart-title">상품 관측 추이</h3></div><span class="panel-meta">SYNTHETIC</span></div><label class="visually-hidden" for="product-select">추이를 볼 상품</label><select id="product-select"></select><div id="history-chart"></div><p class="panel-foot" id="chart-caption"></p></article><article class="panel ranking"><div class="panel-head"><div><span class="tiny-label">GROWTH LEADERS</span><h3>리뷰 증가 상품</h3></div><span class="panel-meta">TOP 5 · DEMO</span></div><div id="ranking-list"></div><p class="panel-foot">선택 기간 양 끝의 유효 관측값 차이 · 실제 판매량 아님</p></article></div>
+      <article class="panel table-panel"><div class="panel-head"><div><span class="tiny-label">PRODUCT EXPLORER</span><h3>상품별 신호를 자세히</h3></div><span class="panel-meta">품질: 고정 7일 · 변화: 선택 기간</span></div><div class="table-scroll"><table><caption class="visually-hidden">합성 상품별 관측 및 리뷰 변화</caption><thead><tr><th scope="col">상품 / 브랜드</th><th scope="col">카테고리</th><th scope="col">최근 유효 리뷰</th><th scope="col">기간 변화</th><th scope="col">리뷰 / 일</th><th scope="col">7일 관측 품질</th></tr></thead><tbody id="products-body"></tbody></table></div></article>
+    </section>
+    <section id="quality" aria-labelledby="quality-title"><div class="section-heading"><div><span class="tiny-label">03 / DATA QUALITY</span><h2 id="quality-title">해석할 수 있는 데이터인가요?</h2></div><span class="section-note">품질 평가 창: 최근 7일 고정</span></div><div class="rules"><div><span class="rule-num">01</span><h3>반복 관측</h3><p>서로 다른 KST 날짜 ≥ 3<br>관측 기간 ≥ 48h · 최근성 ≤ 72h</p></div><div><span class="rule-num">02</span><h3>비교 가능</h3><p>KST 날짜 ≥ 2 · 관측 기간 ≥ 24h<br>최근성 ≤ 72h · 반복 관측 미달</p></div><div><span class="rule-num">03</span><h3>추가 관측 필요</h3><p>기간·빈도·최근성 기준 미달<br>추출 실패를 실제 0으로 대체하지 않음</p></div></div><article class="panel"><div class="panel-head"><div><span class="tiny-label">OBSERVATION BACKLOG</span><h3>다음 관측이 필요한 상품</h3></div><span class="panel-meta">필터 적용 · DEMO</span></div><div id="quality-backlog"></div></article></section>
+    <section id="monitoring" aria-labelledby="monitor-title"><div class="section-heading"><div><span class="tiny-label">04 / PIPELINE MONITORING</span><h2 id="monitor-title">파이프라인의 상태도 데이터입니다.</h2></div><span class="section-note">기간 필터 적용 · 상품 필터와 독립</span></div><div class="notice subtle"><span class="notice-tag">FICTIONAL RUNS</span><p>아래 성공률과 실패 유형은 화면 시연을 위해 만든 별도 실행 기록입니다. 상품 스냅샷 수와 대응하지 않습니다.</p></div><div class="monitor-grid"><article class="panel"><div class="panel-head"><div><span class="tiny-label">DAILY COLLECTION HEALTH</span><h3>날짜별 수집 성공률</h3></div><span id="run-total" class="panel-meta"></span></div><div id="daily-runs"></div></article><article class="panel"><div class="panel-head"><div><span class="tiny-label">FAILURE TAXONOMY</span><h3>실패 원인</h3></div><span class="panel-meta">합성 실행</span></div><div id="failure-bars"></div></article></div><article class="panel table-panel"><div class="panel-head"><h3>자동화 실행 이력 <small>SYNTHETIC / DEMO</small></h3></div><div class="table-scroll"><table><thead><tr><th scope="col">KST 실행 시각</th><th scope="col">작업</th><th scope="col">시도</th><th scope="col">성공</th><th scope="col">결과</th></tr></thead><tbody id="runs-body"></tbody></table></div></article></section>
+    </div>
+    <footer><span>f/ <b>Fashion Review Trend BI</b><br>Automated Data Pipeline, Trend Analytics & Data Quality Monitoring</span><span>Independent portfolio implementation.<br>All displayed data is synthetic.</span></footer>
+  </main>
+</div>
+</body></html>
