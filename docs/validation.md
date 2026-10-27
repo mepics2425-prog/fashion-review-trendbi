@@ -35,7 +35,7 @@ py -m http.server 8000 --directory docs
 | 반응형 | 1440×1100, 390×844 및 기본 태블릿 폭에서 렌더링 확인 |
 | 모바일 표 | 문서 전체 가로 넘침 없이 표 내부에서 가로 스크롤 |
 | 브라우저 로그 | 정상 데이터 로딩·필터·검색 흐름에서 error·warn 0건. 의도적 503 주입은 별도의 예상 오류로 구분 |
-| Git diff | `git diff --check` 통과; README 수정 1개·새 파일 34개, 기존 HEAD `05f1b79` 유지 |
+| Git diff | 업로드 전 `git diff --check` 통과; 파일 35개를 기존 기록 뒤의 일반 Commit으로 업로드 |
 | 보안·데이터 출처 점검 | 작업 파일 35개와 기존 Commit 2개의 README에서 알려진 키·토큰·개인 키·자격 증명 URL·사설 IPv4 패턴 후보 없음. CSV 원본은 독립 합성 생성기와 바이트 단위 일치 |
 
 재현 가능한 합성 기준값: 반복 관측 12개 / 비교 가능 4개 / 추가 관측 필요 8개, 7일 비교 커버리지 16/24. 7일 비교 자격 충족·감소 제외 순증 합계는 +687이다. **모두 fixture 검증값이며 운영 성과가 아니다.**
@@ -57,7 +57,6 @@ README는 로컬 Markdown 렌더러로 이미지 3개 로딩과 첫 화면을 �
 
 ## 검증하지 않은 범위
 
-- GitHub 서버의 최종 Markdown 렌더링과 실제 Pages 배포. 로컬 Markdown 구조·링크·이미지만 검사했다.
 - 현재 무신사 페이지의 Playwright 실행, 추출 성공률, 실제 상품의 리뷰 수.
 - MySQL 적재·성능, Ubuntu systemd 실행, 운영 HTTP API 및 회사 인프라.
 - 자동화 우선순위 개선의 최초 예약 실행 성과.
@@ -65,7 +64,23 @@ README는 로컬 Markdown 렌더러로 이미지 3개 로딩과 첫 화면을 �
 
 ## Git 보존
 
-기존 저장소의 HEAD와 추적 상태를 먼저 확인했다. Git이 추적하는 파일은 README이고 나머지 포트폴리오는 미커밋 상태였다. 이번 작업은 해당 파일을 직접 검사하고 필요한 부분만 수정했다. 기존 Git 기록을 초기화하거나 기존 파일을 삭제하지 않았다. Commit·Push·저장소 공개 범위·Pages 설정 변경은 수행하지 않았다.
+기존 저장소의 HEAD와 추적 상태를 먼저 확인하고 필요한 파일만 수정했다. 기존 Git 기록을 초기화하거나 기존 파일을 삭제하지 않았다. 사용자 승인 후 `Complete Fashion Review Trend BI portfolio` Commit `07b75fc`를 일반 Push로 업로드했고, 별도 승인에 따라 저장소를 Public으로 전환했다.
+
+## GitHub Pages 실제 배포 검증
+
+2026-10-27에 GitHub가 제공한 [실제 데모](https://mepics2425-prog.github.io/fashion-review-trendbi/)에 접속해 확인했다. Pages 설정은 **Deploy from a branch / `main` / `/docs`**이며 HTTPS를 사용한다.
+
+- GitHub API의 Pages 빌드 상태 `built`, 배포 Commit 확인.
+- 배포 HTML·CSS·JavaScript·JSON·아이콘·아키텍처 6개 리소스의 HTTP 200과 Git blob 일치.
+- 합성 데이터 계약, 상품 24개·가상 실행 14회, KPI·SVG 차트 표시.
+- 카테고리 상의 6개, 3일 전환, `DEMO-013` 검색 1개, 빈 검색과 제목 초기화.
+- 감소 계열 차트 선택, 품질 대상 8개, 날짜별 모니터링 7개·실행 이력 14개.
+- 데스크톱 1440×1100 / 모바일 390×844 확인. 모바일 문서 폭 375px, 표는 내부 가로 스크롤.
+- 배포 사이트 Console의 error·warn 0건.
+- GitHub 웹에서 README·커버·아키텍처·대시보드 이미지 3개 로딩 확인.
+- README 상단의 `View Live Demo` / `Explore Source Code`에 실제 주소 연결.
+
+위 검증은 공개 합성 데모에 한정한다. 운영 서버·DB·스케줄러 및 실제 상품 수집을 검증한 것은 아니다.
 
 최종 실행 결과와 Git 변경 파일 목록은 작업 산출물의 별도 인수인계 보고서에도 기록한다.
 

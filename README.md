@@ -2,13 +2,15 @@
 
 # Fashion Review Trend BI
 
+**[View Live Demo](https://mepics2425-prog.github.io/fashion-review-trendbi/)** · **[Explore Source Code](https://github.com/mepics2425-prog/fashion-review-trendbi)**
+
 **Automated Data Pipeline, Trend Analytics & Data Quality Monitoring**
 
 패션 상품의 리뷰 변화를 분석하고, **그 변화를 비교할 만큼 관측이 충분한지** 함께 확인하는 데이터 파이프라인·BI 포트폴리오입니다.
 
 **[데모 실행 안내](#demo--quick-start)** · **[대시보드 소스](docs/index.html)** · **[문제 해결 사례](docs/engineering-challenges.md)** · **[검증 기록](docs/validation.md)**
 
-> 업무에서 경험한 설계·문제 해결을 설명하고, 공개 코드는 독립적으로 재구현했습니다. 모든 데모 데이터는 합성 데이터이며 회사 운영 코드·DB·내부 대시보드는 포함하지 않습니다. GitHub Pages는 아직 배포하지 않았습니다.
+> 업무에서 경험한 설계·문제 해결을 설명하고, 공개 코드는 독립적으로 재구현했습니다. 모든 데모 데이터는 합성 데이터이며 회사 운영 코드·DB·내부 대시보드는 포함하지 않습니다. 공개 데모는 GitHub Pages에서 실행됩니다.
 
 ![운영 참조 구조와 공개 데모를 분리한 아키텍처](docs/assets/architecture.svg)
 
@@ -117,7 +119,9 @@ py -m http.server 8000 --directory docs
 
 ### GitHub Pages 활성화
 
-직접 검토·Commit·Push한 다음 GitHub 저장소에서 **Settings → Pages → Build and deployment → Source: Deploy from a branch → 게시할 branch → `/docs` → Save**를 선택합니다. branch 이름은 실제 업로드한 branch를 선택하세요. 배포 완료 후 Pages 화면이 제공하는 URL을 이 README에 추가합니다. 아직 배포하지 않은 URL을 데모 링크로 만들지 않았습니다.
+현재 [공개 데모](https://mepics2425-prog.github.io/fashion-review-trendbi/)는 **Deploy from a branch / `main` / `/docs`** 설정으로 배포되어 있습니다. `main`에 변경 사항을 Push하면 Pages가 다시 빌드합니다.
+
+다른 저장소에서 재현할 경우 **Settings → Pages → Build and deployment → Source: Deploy from a branch → 게시할 branch → `/docs` → Save**를 선택합니다. 실제 배포가 완료되면 Pages 화면이 제공한 주소를 확인하세요.
 
 저장소의 플랜·공개 범위에 따라 Pages 사용 가능 여부가 다릅니다. 공개 설정을 임의로 바꾸지 말고 계정 조건을 확인하세요. 절차는 [GitHub 공식 문서](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site)를 따릅니다.
 
