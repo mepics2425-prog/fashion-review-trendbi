@@ -1,0 +1,91 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="824" viewBox="0 0 1440 824" role="img" aria-labelledby="title desc">
+<title id="title">증가량 옆에 관측의 충분성을 함께 표시합니다</title><desc id="desc">실제 합성 관측 이력으로 비교한 날짜 수 · 관측 기간 · 최근성의 역할</desc>
+<defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0 8 4 0 8" fill="none" stroke="#315deb" stroke-width="1.4"/></marker></defs>
+<style>text{font-family:Arial,"Malgun Gothic","Apple SD Gothic Neo",sans-serif}path{stroke-linecap:round}</style>
+<rect x="0.5" y="0.5" width="1439" height="823" rx="16" fill="#f7f9fc" stroke="#e3e8f1"/>
+<text x="48" y="40" font-size="13" fill="#315deb" font-weight="650" text-anchor="start">FASHION REVIEW / ENGINEERING NOTES</text>
+<text x="48" y="90" font-size="34" fill="#263246" font-weight="700" text-anchor="start">증가량 옆에 관측의 충분성을 함께 표시합니다</text>
+<text x="48" y="124" font-size="17" fill="#67758b" font-weight="400" text-anchor="start">실제 합성 관측 이력으로 비교한 날짜 수 · 관측 기간 · 최근성의 역할</text>
+<text x="48" y="178" font-size="20" fill="#263246" font-weight="650" text-anchor="start">같은 7일 창, 다른 관측 근거</text>
+<text x="1025" y="178" font-size="18" fill="#67758b" font-weight="400" text-anchor="start">판정과 해석</text>
+<path d="M330.0 212 L330.0 602" fill="none" stroke="#e5eaf3" stroke-width="1"/>
+<text x="330.0" y="203" font-size="13" fill="#67758b" font-weight="400" text-anchor="middle">T−7일</text>
+<path d="M422.8571428571429 212 L422.8571428571429 602" fill="none" stroke="#e5eaf3" stroke-width="1"/>
+<text x="422.8571428571429" y="203" font-size="13" fill="#67758b" font-weight="400" text-anchor="middle">T−6일</text>
+<path d="M515.7142857142858 212 L515.7142857142858 602" fill="none" stroke="#e5eaf3" stroke-width="1"/>
+<text x="515.7142857142858" y="203" font-size="13" fill="#67758b" font-weight="400" text-anchor="middle">T−5일</text>
+<path d="M608.5714285714286 212 L608.5714285714286 602" fill="none" stroke="#e5eaf3" stroke-width="1"/>
+<text x="608.5714285714286" y="203" font-size="13" fill="#67758b" font-weight="400" text-anchor="middle">T−4일</text>
+<path d="M701.4285714285714 212 L701.4285714285714 602" fill="none" stroke="#e5eaf3" stroke-width="1"/>
+<text x="701.4285714285714" y="203" font-size="13" fill="#67758b" font-weight="400" text-anchor="middle">T−3일</text>
+<path d="M794.2857142857142 212 L794.2857142857142 602" fill="none" stroke="#e5eaf3" stroke-width="1"/>
+<text x="794.2857142857142" y="203" font-size="13" fill="#67758b" font-weight="400" text-anchor="middle">T−2일</text>
+<path d="M887.1428571428571 212 L887.1428571428571 602" fill="none" stroke="#e5eaf3" stroke-width="1"/>
+<text x="887.1428571428571" y="203" font-size="13" fill="#67758b" font-weight="400" text-anchor="middle">T−1일</text>
+<path d="M980.0 212 L980.0 602" fill="none" stroke="#e5eaf3" stroke-width="1"/>
+<text x="980.0" y="203" font-size="13" fill="#67758b" font-weight="400" text-anchor="middle">T</text>
+<text x="48" y="250" font-size="21" fill="#263246" font-weight="650" text-anchor="start">DEMO-013</text>
+<text x="48" y="278" font-size="16" fill="#67758b" font-weight="400" text-anchor="start">13회 / KST 7일 / 144h</text>
+<path d="M330 255 L980 255" fill="none" stroke="#dfe6f1" stroke-width="3"/>
+<path d="M411.25 255 L968.39 255" fill="none" stroke="#315deb" stroke-width="5"/>
+<path d="M968.39 255 L980 255" fill="none" stroke="#315deb" stroke-width="2" stroke-dasharray="6 5"/>
+<circle cx="411.25" cy="255" r="6" fill="#315deb"/>
+<circle cx="457.68" cy="255" r="6" fill="#315deb"/>
+<circle cx="504.11" cy="255" r="6" fill="#315deb"/>
+<circle cx="550.54" cy="255" r="6" fill="#315deb"/>
+<circle cx="596.96" cy="255" r="6" fill="#315deb"/>
+<circle cx="643.39" cy="255" r="6" fill="#315deb"/>
+<circle cx="689.82" cy="255" r="6" fill="#315deb"/>
+<circle cx="736.25" cy="255" r="6" fill="#315deb"/>
+<circle cx="782.68" cy="255" r="6" fill="#315deb"/>
+<circle cx="829.11" cy="255" r="6" fill="#315deb"/>
+<circle cx="875.54" cy="255" r="6" fill="#315deb"/>
+<circle cx="921.96" cy="255" r="6" fill="#315deb"/>
+<circle cx="968.39" cy="255" r="6" fill="#315deb"/>
+<rect x="1025" y="227" width="280" height="36" rx="6" fill="#eef3ff" stroke="none"/><text x="1038" y="252" font-size="18" fill="#315deb" font-weight="650" text-anchor="start">반복 관측</text>
+<text x="1025" y="290" font-size="17" fill="#263246" font-weight="650" text-anchor="start">횟수와 날짜는 다릅니다</text>
+<text x="1025" y="314" font-size="15" fill="#67758b" font-weight="400" text-anchor="start">13회 관측 → KST 날짜 7일</text>
+<text x="48" y="348" font-size="21" fill="#263246" font-weight="650" text-anchor="start">DEMO-004</text>
+<text x="48" y="376" font-size="16" fill="#67758b" font-weight="400" text-anchor="start">2회 / KST 2일 / 36h</text>
+<path d="M330 353 L980 353" fill="none" stroke="#dfe6f1" stroke-width="3"/>
+<path d="M829.11 353 L968.39 353" fill="none" stroke="#19705b" stroke-width="5"/>
+<path d="M968.39 353 L980 353" fill="none" stroke="#19705b" stroke-width="2" stroke-dasharray="6 5"/>
+<circle cx="829.11" cy="353" r="6" fill="#19705b"/>
+<circle cx="968.39" cy="353" r="6" fill="#19705b"/>
+<rect x="1025" y="325" width="280" height="36" rx="6" fill="#eef3ff" stroke="none"/><text x="1038" y="350" font-size="18" fill="#19705b" font-weight="650" text-anchor="start">비교 가능</text>
+<text x="1025" y="388" font-size="17" fill="#263246" font-weight="650" text-anchor="start">비교의 최소 조건 충족</text>
+<text x="1025" y="412" font-size="15" fill="#67758b" font-weight="400" text-anchor="start">2일 · 36h · 최근 3h</text>
+<text x="48" y="446" font-size="21" fill="#263246" font-weight="650" text-anchor="start">DEMO-005</text>
+<text x="48" y="474" font-size="16" fill="#67758b" font-weight="400" text-anchor="start">3회 / KST 2일 / 24h</text>
+<path d="M330 451 L980 451" fill="none" stroke="#dfe6f1" stroke-width="3"/>
+<path d="M411.25 451 L504.11 451" fill="none" stroke="#9d691c" stroke-width="5"/>
+<path d="M504.11 451 L980 451" fill="none" stroke="#9d691c" stroke-width="2" stroke-dasharray="6 5"/>
+<circle cx="411.25" cy="451" r="6" fill="#9d691c"/>
+<circle cx="457.68" cy="451" r="6" fill="#9d691c"/>
+<circle cx="504.11" cy="451" r="6" fill="#9d691c"/>
+<rect x="1025" y="423" width="280" height="36" rx="6" fill="#eef3ff" stroke="none"/><text x="1038" y="448" font-size="18" fill="#9d691c" font-weight="650" text-anchor="start">추가 관측 필요</text>
+<text x="1025" y="486" font-size="17" fill="#263246" font-weight="650" text-anchor="start">최근성 기준 미달</text>
+<text x="1025" y="510" font-size="15" fill="#67758b" font-weight="400" text-anchor="start">123h 경과 → 72h 초과</text>
+<text x="48" y="544" font-size="21" fill="#263246" font-weight="650" text-anchor="start">DEMO-006</text>
+<text x="48" y="572" font-size="16" fill="#67758b" font-weight="400" text-anchor="start">1회 / KST 1일 / 0h</text>
+<path d="M330 549 L980 549" fill="none" stroke="#dfe6f1" stroke-width="3"/>
+<path d="M968.39 549 L980 549" fill="none" stroke="#9d691c" stroke-width="2" stroke-dasharray="6 5"/>
+<circle cx="968.39" cy="549" r="6" fill="#9d691c"/>
+<rect x="1025" y="521" width="280" height="36" rx="6" fill="#eef3ff" stroke="none"/><text x="1038" y="546" font-size="18" fill="#9d691c" font-weight="650" text-anchor="start">추가 관측 필요</text>
+<text x="1025" y="584" font-size="17" fill="#263246" font-weight="650" text-anchor="start">관측 기간과 날짜 부족</text>
+<text x="1025" y="608" font-size="15" fill="#67758b" font-weight="400" text-anchor="start">최근 3h여도 1일 · 0h</text>
+<text x="330" y="623" font-size="15" fill="#67758b" font-weight="400" text-anchor="start">선: 최초~최종 유효 관측 기간     점: 유효 스냅샷     점선: 마지막 관측 이후</text>
+<rect x="48" y="649" width="436" height="116" rx="12" fill="#fff" stroke="#dce3ee"/>
+<text x="68" y="681" font-size="21" fill="#315deb" font-weight="650" text-anchor="start">반복 관측</text>
+<text x="68" y="715" font-size="17" fill="#263246" font-weight="400" text-anchor="start">날짜 ≥ 3 · 기간 ≥ 48h</text>
+<text x="68" y="743" font-size="16" fill="#67758b" font-weight="400" text-anchor="start">최근성 ≤ 72h</text>
+<rect x="502" y="649" width="436" height="116" rx="12" fill="#fff" stroke="#dce3ee"/>
+<text x="522" y="681" font-size="21" fill="#19705b" font-weight="650" text-anchor="start">비교 가능</text>
+<text x="522" y="715" font-size="17" fill="#263246" font-weight="400" text-anchor="start">날짜 ≥ 2 · 기간 ≥ 24h</text>
+<text x="522" y="743" font-size="16" fill="#67758b" font-weight="400" text-anchor="start">최근성 ≤ 72h · 반복 관측 미달</text>
+<rect x="956" y="649" width="436" height="116" rx="12" fill="#fff" stroke="#dce3ee"/>
+<text x="976" y="681" font-size="21" fill="#9d691c" font-weight="650" text-anchor="start">추가 관측 필요</text>
+<text x="976" y="715" font-size="17" fill="#263246" font-weight="400" text-anchor="start">기간 · 날짜 · 최근성 중 기준 미달</text>
+<text x="976" y="743" font-size="16" fill="#67758b" font-weight="400" text-anchor="start">실패한 추출은 유효 관측에서 제외</text>
+<text x="48" y="798" font-size="14" fill="#67758b" font-weight="400" text-anchor="start">SYNTHETIC DATA · T = 2026-10-26 18:00 KST · 운영상 비교 가능성 지표이며 통계적 신뢰도나 예측 정확도가 아닙니다.</text>
+</svg>

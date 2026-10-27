@@ -65,6 +65,13 @@
 
 ## Data Pipeline
 
+![DEMO-013의 원본 스냅샷이 정규화·검증·변화량·품질을 거쳐 BI로 전달되는 과정](docs/assets/pipeline-walkthrough.svg)
+
+합성 상품 `DEMO-013`의 실제 예시입니다. 리뷰 255→339, 관측 기간 144시간으로 **변화량 +84건 · 평균 +14건/일**을 계산하고 관측 근거를 함께 전달합니다.
+
+<details>
+<summary>단계별 구현과 실행 순서</summary>
+
 1. 고정 시드 대신 명시적인 수식·기준 시각으로 합성 상품과 관측 fixture를 생성합니다.
 2. 입력 문자열·상품 ID·카테고리·타임존·리뷰 수를 검증합니다.
 3. 동일 상품·동일 순간의 완전 중복을 축약하고 충돌 레코드는 실패로 처리합니다.
@@ -74,7 +81,13 @@
 
 기준 시각은 **2026-10-26 18:00 KST**입니다. 같은 입력은 같은 결과를 만들며, 화면은 실시간으로 갱신되는 운영 환경이 아닙니다.
 
+</details>
+
 ## Data Quality Strategy
+
+![같은 7일 창에서도 반복 관측·비교 가능·오래된 관측·한 번의 관측이 다르게 평가되는 이유](docs/assets/observation-quality.svg)
+
+같은 날 여러 번 수집해도 관측 날짜 수가 그만큼 늘지는 않습니다. **날짜·실제 관측 기간·최근성**을 함께 확인해야 오래된 데이터나 짧은 이력을 구분할 수 있습니다.
 
 | 등급 | 최근 7일의 유효 관측 조건 |
 | --- | --- |
@@ -86,6 +99,8 @@
 
 ## Engineering Challenges
 
+![요청·응답 식별, Product 객체, 후보의 유일성을 검증해 확인 불가를 실제 0과 구분하는 흐름](docs/assets/review-validation.svg)
+
 | 사례 | 핵심 판단 | 검증과 한계 |
 | --- | --- | --- |
 | Reliable Review Count Extraction | `__NEXT_DATA__` 한계를 JSON-LD 보조 추출과 상품 식별 검증으로 보완 | 일부 상품 재조회 확인. 전체 성공률 향상 수치는 없음 |
@@ -94,11 +109,28 @@
 
 각 사례의 **Problem → Root Cause → Solution → Validation → Trade-offs**는 [Engineering Challenges](docs/engineering-challenges.md)에 정리했습니다.
 
+<details>
+<summary>카테고리 균형 재관측 설계 보기</summary>
+
+![상의·하의·아우터·원피스 각 5개와 관측 이력 조건을 함께 고려한 재관측 개념도](docs/assets/balanced-observation.svg)
+
+업무 설계를 설명하는 개념도입니다. 슬롯은 성공 건수가 아니며, 공개 데모가 실제 스케줄러를 실행한다는 의미도 아닙니다.
+
+</details>
+
 ## Dashboard Preview
 
-![합성 데이터 대시보드의 실제 브라우저 화면](docs/assets/dashboard-preview.png)
+**Overview · 데이터 규모, 관측 품질과 카테고리 분포**
 
-[트렌드 분석 화면](docs/assets/dashboard-trends.png) · [모바일 화면](docs/assets/dashboard-mobile.png)
+![합성 데이터 대시보드 Overview의 실제 고해상도 브라우저 캡처](docs/assets/dashboard-overview-2x.png)
+
+**Trend Analytics · 상품별 추이와 증가 순위**
+
+![합성 데이터 대시보드의 상품별 리뷰 추이와 증가 순위 고해상도 캡처](docs/assets/dashboard-trends-2x.png)
+
+[Overview 원본 PNG](docs/assets/dashboard-overview-2x.png) · [Trend 원본 PNG](docs/assets/dashboard-trends-2x.png) · [모바일 원본 PNG](docs/assets/dashboard-mobile-3x.png)
+
+실제 공개 데모의 핵심 분석 영역을 **2배율 PNG**, 모바일 화면을 **3배율 PNG**로 캡처했습니다. 모든 표시값은 합성 데이터입니다. 위 링크에서 원본 해상도를 확인할 수 있습니다.
 
 따뜻한 라이트 그레이·차콜·절제된 블루를 사용했습니다. 표와 차트가 같은 필터를 공유하며, 상품을 클릭하면 해당 관측 추이를 볼 수 있습니다. 키보드 조작용 label·focus·skip link, 텍스트 차트 설명, 작은 화면 레이아웃을 제공합니다. 표는 작은 화면에서 가로 스크롤합니다.
 
@@ -137,6 +169,8 @@ Node는 JavaScript 문법 검사에만 필요하며 데모 실행에는 필요�
 
 2026-10-27에는 Windows / Python 3.12.10에서 기존 34개를 재실행한 뒤 CSV 입력 경계와 실패 시 기존 산출물 보존 검사를 추가했습니다. 최신 검증은 **42개 테스트**를 대상으로 합니다. CSV 구조가 잘못되면 명확한 오류로 종료하고 이전 BI JSON은 덮어쓰지 않습니다.
 
+설명용 SVG 4개는 `py -m src.generate_visuals`로 다시 생성할 수 있습니다. 상품 흐름과 관측 타임라인은 합성 JSON을 읽어 만들고, 추출 검증·관측 배정 그림은 문서에 명시한 설계 범위만 표현합니다.
+
 ## Results & Limitations
 
 **확인 가능한 결과:** 합성 데이터 생성부터 분석·정적 JSON·BI 탐색까지 독립 실행 경로를 제공합니다. 업무 경험에서는 일부 추출 실패 상품의 값을 재조회해 확인했고, 개선한 우선순위 방식을 테스트·설정 적용했습니다. 이는 사용자 제공 이력이며 회사 운영 자료로 재검증한 주장은 아닙니다.
@@ -168,6 +202,7 @@ fashion-review-trendbi/
 │   ├── review_extractor.py      # 네트워크 없는 추출 계약 데모
 │   ├── synthetic_data.py
 │   ├── generate_demo.py
+│   ├── generate_visuals.py      # 설명용 SVG 4종 재생성
 │   └── verify_project.py
 ├── sample_data/                 # 가상 상품·관측 CSV
 └── tests/                       # 단위·계약 테스트

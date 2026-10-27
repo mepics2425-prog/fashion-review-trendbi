@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="698" viewBox="0 0 1440 698" role="img" aria-labelledby="title desc">
+<title id="title">카테고리 균형과 관측 이력을 함께 관리합니다</title><desc id="desc">관측 후보를 고르는 조건과 13:00 재관측의 배정 구조 · 가중치나 우선순위 점수를 임의로 만들지 않았습니다</desc>
+<defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0 8 4 0 8" fill="none" stroke="#315deb" stroke-width="1.4"/></marker></defs>
+<style>text{font-family:Arial,"Malgun Gothic","Apple SD Gothic Neo",sans-serif}path{stroke-linecap:round}</style>
+<rect x="0.5" y="0.5" width="1439" height="697" rx="16" fill="#f7f9fc" stroke="#e3e8f1"/>
+<text x="48" y="40" font-size="13" fill="#315deb" font-weight="650" text-anchor="start">FASHION REVIEW / ENGINEERING NOTES</text>
+<text x="48" y="90" font-size="34" fill="#263246" font-weight="700" text-anchor="start">카테고리 균형과 관측 이력을 함께 관리합니다</text>
+<text x="48" y="124" font-size="17" fill="#67758b" font-weight="400" text-anchor="start">관측 후보를 고르는 조건과 13:00 재관측의 배정 구조 · 가중치나 우선순위 점수를 임의로 만들지 않았습니다</text>
+<rect x="48" y="174" width="370" height="352" rx="12" fill="#fff" stroke="#dce3ee"/>
+<text x="72" y="214" font-size="23" fill="#263246" font-weight="650" text-anchor="start">선정에 고려한 조건</text>
+<circle cx="78" cy="251" r="4" fill="#315deb"/>
+<text x="94" y="258" font-size="19" fill="#67758b" font-weight="400" text-anchor="start">관측 이력 없음 · 부족</text>
+<circle cx="78" cy="295" r="4" fill="#315deb"/>
+<text x="94" y="302" font-size="19" fill="#67758b" font-weight="400" text-anchor="start">리뷰 증가 확인</text>
+<circle cx="78" cy="339" r="4" fill="#315deb"/>
+<text x="94" y="346" font-size="19" fill="#67758b" font-weight="400" text-anchor="start">장기 미관측</text>
+<circle cx="78" cy="383" r="4" fill="#315deb"/>
+<text x="94" y="390" font-size="19" fill="#67758b" font-weight="400" text-anchor="start">최근 관측 시각</text>
+<circle cx="78" cy="427" r="4" fill="#315deb"/>
+<text x="94" y="434" font-size="19" fill="#67758b" font-weight="400" text-anchor="start">중복 선정 방지</text>
+<circle cx="78" cy="471" r="4" fill="#315deb"/>
+<text x="94" y="478" font-size="19" fill="#67758b" font-weight="400" text-anchor="start">실패 재시도 유예</text>
+<path d="M432 348 L470 348" fill="none" stroke="#315deb" stroke-width="2" marker-end="url(#arrow)"/>
+<rect x="490" y="174" width="440" height="164" rx="12" fill="#fff" stroke="#dce3ee"/>
+<text x="514" y="214" font-size="25" fill="#263246" font-weight="650" text-anchor="start">상의</text>
+<text x="906" y="214" font-size="17" fill="#315deb" font-weight="650" text-anchor="end">5개 배정</text>
+<circle cx="540" cy="265" r="20" fill="#e8efff"/>
+<text x="540" y="271" font-size="17" fill="#315deb" font-weight="650" text-anchor="middle">1</text>
+<circle cx="622" cy="265" r="20" fill="#e8efff"/>
+<text x="622" y="271" font-size="17" fill="#315deb" font-weight="650" text-anchor="middle">2</text>
+<circle cx="704" cy="265" r="20" fill="#e8efff"/>
+<text x="704" y="271" font-size="17" fill="#315deb" font-weight="650" text-anchor="middle">3</text>
+<circle cx="786" cy="265" r="20" fill="#e8efff"/>
+<text x="786" y="271" font-size="17" fill="#315deb" font-weight="650" text-anchor="middle">4</text>
+<circle cx="868" cy="265" r="20" fill="#e8efff"/>
+<text x="868" y="271" font-size="17" fill="#315deb" font-weight="650" text-anchor="middle">5</text>
+<text x="514" y="317" font-size="15" fill="#67758b" font-weight="400" text-anchor="start">배정 슬롯 · 수집 성공 수가 아닙니다</text>
+<rect x="952" y="174" width="440" height="164" rx="12" fill="#fff" stroke="#dce3ee"/>
+<text x="976" y="214" font-size="25" fill="#263246" font-weight="650" text-anchor="start">하의</text>
+<text x="1368" y="214" font-size="17" fill="#315deb" font-weight="650" text-anchor="end">5개 배정</text>
+<circle cx="1002" cy="265" r="20" fill="#e8efff"/>
+<text x="1002" y="271" font-size="17" fill="#315deb" font-weight="650" text-anchor="middle">1</text>
+<circle cx="1084" cy="265" r="20" fill="#e8efff"/>
+<text x="1084" y="271" font-size="17" fill="#315deb" font-weight="650" text-anchor="middle">2</text>
+<circle cx="1166" cy="265" r="20" fill="#e8efff"/>
+<text x="1166" y="271" font-size="17" fill="#315deb" font-weight="650" text-anchor="middle">3</text>
+<circle cx="1248" cy="265" r="20" fill="#e8efff"/>
+<text x="1248" y="271" font-size="17" fill="#315deb" font-weight="650" text-anchor="middle">4</text>
+<circle cx="1330" cy="265" r="20" fill="#e8efff"/>
+<text x="1330" y="271" font-size="17" fill="#315deb" font-weight="650" text-anchor="middle">5</text>
+<text x="976" y="317" font-size="15" fill="#67758b" font-weight="400" text-anchor="start">배정 슬롯 · 수집 성공 수가 아닙니다</text>
+<rect x="490" y="362" width="440" height="164" rx="12" fill="#fff" stroke="#dce3ee"/>
+<text x="514" y="402" font-size="25" fill="#263246" font-weight="650" text-anchor="start">아우터</text>
+<text x="906" y="402" font-size="17" fill="#315deb" font-weight="650" text-anchor="end">5개 배정</text>
+<circle cx="540" cy="453" r="20" fill="#e8efff"/>
+<text x="540" y="459" font-size="17" fill="#315deb" font-weight="650" text-anchor="middle">1</text>
+<circle cx="622" cy="453" r="20" fill="#e8efff"/>
+<text x="622" y="459" font-size="17" fill="#315deb" font-weight="650" text-anchor="middle">2</text>
+<circle cx="704" cy="453" r="20" fill="#e8efff"/>
+<text x="704" y="459" font-size="17" fill="#315deb" font-weight="650" text-anchor="middle">3</text>
+<circle cx="786" cy="453" r="20" fill="#e8efff"/>
+<text x="786" y="459" font-size="17" fill="#315deb" font-weight="650" text-anchor="middle">4</text>
+<circle cx="868" cy="453" r="20" fill="#e8efff"/>
+<text x="868" y="459" font-size="17" fill="#315deb" font-weight="650" text-anchor="middle">5</text>
+<text x="514" y="505" font-size="15" fill="#67758b" font-weight="400" text-anchor="start">배정 슬롯 · 수집 성공 수가 아닙니다</text>
+<rect x="952" y="362" width="440" height="164" rx="12" fill="#fff" stroke="#dce3ee"/>
+<text x="976" y="402" font-size="25" fill="#263246" font-weight="650" text-anchor="start">원피스</text>
+<text x="1368" y="402" font-size="17" fill="#315deb" font-weight="650" text-anchor="end">5개 배정</text>
+<circle cx="1002" cy="453" r="20" fill="#e8efff"/>
+<text x="1002" y="459" font-size="17" fill="#315deb" font-weight="650" text-anchor="middle">1</text>
+<circle cx="1084" cy="453" r="20" fill="#e8efff"/>
+<text x="1084" y="459" font-size="17" fill="#315deb" font-weight="650" text-anchor="middle">2</text>
+<circle cx="1166" cy="453" r="20" fill="#e8efff"/>
+<text x="1166" y="459" font-size="17" fill="#315deb" font-weight="650" text-anchor="middle">3</text>
+<circle cx="1248" cy="453" r="20" fill="#e8efff"/>
+<text x="1248" y="459" font-size="17" fill="#315deb" font-weight="650" text-anchor="middle">4</text>
+<circle cx="1330" cy="453" r="20" fill="#e8efff"/>
+<text x="1330" y="459" font-size="17" fill="#315deb" font-weight="650" text-anchor="middle">5</text>
+<text x="976" y="505" font-size="15" fill="#67758b" font-weight="400" text-anchor="start">배정 슬롯 · 수집 성공 수가 아닙니다</text>
+<rect x="48" y="558" width="1344" height="76" rx="12" fill="#edf2ff" stroke="none"/>
+<text x="72" y="588" font-size="21" fill="#315deb" font-weight="650" text-anchor="start">09:00  검색어 순환</text>
+<text x="460" y="588" font-size="21" fill="#315deb" font-weight="650" text-anchor="start">13:00  카테고리 균형 재관측</text>
+<text x="72" y="617" font-size="17" fill="#67758b" font-weight="400" text-anchor="start">카테고리별 5개 × 4개 카테고리 = 하루 최대 20개 재관측</text>
+<text x="48" y="672" font-size="14" fill="#67758b" font-weight="400" text-anchor="start">업무 설계의 개념도 · 공개 데모는 가상 실행 기록만 사용 · 설정 적용 이후 최초 예약 실행의 효과는 별도 검증 대상</text>
+</svg>

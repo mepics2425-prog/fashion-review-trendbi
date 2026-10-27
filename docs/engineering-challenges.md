@@ -4,6 +4,8 @@
 
 ## Case Study 01 · Reliable Review Count Extraction
 
+![상품 식별과 JSON-LD 후보 유일성 검증 흐름](assets/review-validation.svg)
+
 **Problem.** 일부 상품에서 정확한 리뷰 수를 얻지 못했다. 확인 불가를 0으로 저장하면 이후 급증처럼 보이는 가짜 트렌드가 만들어질 수 있었다.
 
 **Root Cause.** `__NEXT_DATA__`만으로 항상 정확한 `reviewCount`를 확보할 수 없었다. 페이지에 여러 숫자나 상품 객체가 존재할 때 필드명만 탐색하는 방식은 요청 상품과 무관한 값을 채택할 위험이 있다.
@@ -24,6 +26,8 @@ requested product → response identity matches?
 
 ## Case Study 02 · Category-balanced Observation Scheduling
 
+![카테고리별 배정 슬롯과 후보 선정 조건](assets/balanced-observation.svg)
+
 **Problem.** 특정 카테고리에 관측이 집중되면 수집량이 많아도 카테고리 간 비교에 필요한 이력이 부족했다.
 
 **Root Cause.** 수집 접근성이 높은 상품이나 자주 등장하는 상품을 반복해서 고르면 기존 편중이 유지된다. 최신값 갱신만으로는 여러 날짜에 걸친 비교 표본이 쌓이지 않는다.
@@ -35,6 +39,8 @@ requested product → response identity matches?
 **Trade-offs.** 균등 할당은 인기 카테고리의 단기 변화 포착량을 줄일 수 있다. 카테고리 내 후보가 부족할 때의 재배분 정책과 정확한 우선순위 가중치는 제공되지 않아 명세로 발명하지 않았다. 운영 효과는 관측 날짜 수·비교 커버리지·재시도 비용을 실행 전후 같은 창으로 비교해야 한다.
 
 ## Case Study 03 · Observation Quality Assessment
+
+![합성 관측 이력의 날짜·기간·최근성 비교](assets/observation-quality.svg)
 
 **Problem.** 리뷰 증가량이 있어도 관측 날짜·기간·최근성이 충분하지 않으면 결과를 해석하기 어려웠다.
 

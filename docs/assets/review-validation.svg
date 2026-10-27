@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="602" viewBox="0 0 1440 602" role="img" aria-labelledby="title desc">
+<title id="title">상품 식별을 통과한 리뷰 수만 채택합니다</title><desc id="desc">__NEXT_DATA__ 추출 실패를 보완할 때도 JSON-LD의 임의 숫자를 채택하지 않는 검증 순서</desc>
+<defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0 8 4 0 8" fill="none" stroke="#315deb" stroke-width="1.4"/></marker></defs>
+<style>text{font-family:Arial,"Malgun Gothic","Apple SD Gothic Neo",sans-serif}path{stroke-linecap:round}</style>
+<rect x="0.5" y="0.5" width="1439" height="601" rx="16" fill="#f7f9fc" stroke="#e3e8f1"/>
+<text x="48" y="40" font-size="13" fill="#315deb" font-weight="650" text-anchor="start">FASHION REVIEW / ENGINEERING NOTES</text>
+<text x="48" y="90" font-size="34" fill="#263246" font-weight="700" text-anchor="start">상품 식별을 통과한 리뷰 수만 채택합니다</text>
+<text x="48" y="124" font-size="17" fill="#67758b" font-weight="400" text-anchor="start">__NEXT_DATA__ 추출 실패를 보완할 때도 JSON-LD의 임의 숫자를 채택하지 않는 검증 순서</text>
+<rect x="48" y="174" width="300" height="218" rx="12" fill="#fff" stroke="#dce3ee"/>
+<text x="70" y="208" font-size="13" fill="#315deb" font-weight="650" text-anchor="start">01 / IDENTITY</text>
+<text x="70" y="248" font-size="22" fill="#263246" font-weight="650" text-anchor="start">요청·응답 상품 일치</text>
+<text x="70" y="290" font-size="17" fill="#67758b" font-weight="400" text-anchor="start">허용 도메인과 상품 경로</text>
+<text x="70" y="322" font-size="17" fill="#67758b" font-weight="400" text-anchor="start">요청 ID = 응답 ID</text>
+<text x="70" y="354" font-size="17" fill="#67758b" font-weight="400" text-anchor="start">다른 상품 응답은 거부</text>
+<path d="M356 279 L388 279" fill="none" stroke="#315deb" stroke-width="2" marker-end="url(#arrow)"/>
+<path d="M198 398 L198 445" fill="none" stroke="#9d691c" stroke-width="2" stroke-dasharray="6 5"/>
+<rect x="396" y="174" width="300" height="218" rx="12" fill="#fff" stroke="#dce3ee"/>
+<text x="418" y="208" font-size="13" fill="#315deb" font-weight="650" text-anchor="start">02 / PRODUCT</text>
+<text x="418" y="248" font-size="22" fill="#263246" font-weight="650" text-anchor="start">Product 객체 확인</text>
+<text x="418" y="290" font-size="17" fill="#67758b" font-weight="400" text-anchor="start">@type = Product</text>
+<text x="418" y="322" font-size="17" fill="#67758b" font-weight="400" text-anchor="start">Product URL의 식별 일치</text>
+<text x="418" y="354" font-size="17" fill="#67758b" font-weight="400" text-anchor="start">관계없는 객체는 채택하지 않음</text>
+<path d="M704 279 L736 279" fill="none" stroke="#315deb" stroke-width="2" marker-end="url(#arrow)"/>
+<path d="M546 398 L546 445" fill="none" stroke="#9d691c" stroke-width="2" stroke-dasharray="6 5"/>
+<rect x="744" y="174" width="300" height="218" rx="12" fill="#fff" stroke="#dce3ee"/>
+<text x="766" y="208" font-size="13" fill="#315deb" font-weight="650" text-anchor="start">03 / CANDIDATES</text>
+<text x="766" y="248" font-size="22" fill="#263246" font-weight="650" text-anchor="start">유효 후보의 유일성</text>
+<text x="766" y="290" font-size="17" fill="#67758b" font-weight="400" text-anchor="start">비음수 정수만 허용</text>
+<text x="766" y="322" font-size="17" fill="#67758b" font-weight="400" text-anchor="start">42, 42 → 유일한 값 42</text>
+<text x="766" y="354" font-size="17" fill="#67758b" font-weight="400" text-anchor="start">42, 43 → 모호한 값 거부</text>
+<path d="M1052 279 L1084 279" fill="none" stroke="#315deb" stroke-width="2" marker-end="url(#arrow)"/>
+<path d="M894 398 L894 445" fill="none" stroke="#9d691c" stroke-width="2" stroke-dasharray="6 5"/>
+<rect x="1092" y="174" width="300" height="218" rx="12" fill="#fff" stroke="#dce3ee"/>
+<text x="1114" y="208" font-size="13" fill="#315deb" font-weight="650" text-anchor="start">04 / ACCEPT</text>
+<text x="1114" y="248" font-size="22" fill="#263246" font-weight="650" text-anchor="start">검증된 값만 채택</text>
+<text x="1114" y="290" font-size="17" fill="#67758b" font-weight="400" text-anchor="start">42 → 검증된 리뷰 수</text>
+<text x="1114" y="322" font-size="17" fill="#67758b" font-weight="400" text-anchor="start">0 → 유효한 실제 0</text>
+<text x="1114" y="354" font-size="17" fill="#67758b" font-weight="400" text-anchor="start">None → 확인되지 않은 값</text>
+<rect x="48" y="453" width="1344" height="82" rx="12" fill="#fcf4e8" stroke="#ebd8b8"/>
+<text x="72" y="486" font-size="23" fill="#9d691c" font-weight="650" text-anchor="start">검증 실패 → NULL / 오류로 반환</text>
+<text x="72" y="516" font-size="18" fill="#67758b" font-weight="400" text-anchor="start">상품 불일치 · 잘못된 형식 · 후보 충돌을 0으로 대체하지 않습니다.</text>
+<text x="48" y="575" font-size="15" fill="#67758b" font-weight="400" text-anchor="start">오프라인 JSON-LD 검증 계약의 설명도 · 42는 fixture 예시 값 · 실제 사이트 조회나 운영 DB 적재 결과가 아닙니다.</text>
+</svg>
